@@ -6,4 +6,6 @@ To run a local server and open the app, run the file, `plotlydash.py`, and a URL
 
 The data was webscraped from Pubmed using the search term: 'Lung Cancer'.
 
+Note: Git-lfs was used to store the csv and npy files.
+
 This project is still in progress. 
