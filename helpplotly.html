@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+.headerDiv {
+  border: 5px;
+  text-align: center;
+}
+.contentDiv {
+  margin-right: 250px;
+  margin-left: 250px;
+  text-align:left;
+}
+
+</style>
+
+<div class='headerDiv'>
+	<h1>Guidelines for the Graphical Search Method</h1>
+</div>
+
+<hr>
+
+<div class='contentDiv'>
+	<h2>About</h2>
+	<p>This interactive graph is used as a way to filter and select scientific publications. This project was inspired by the time consuming task of literature review.
+	This is propogated through the current search method of a typical list view when searching for papers, which can be daunting when
+	going through thousands of papers. To present the data in a condensed, organized manner, the graph was set up to sort papers by the number of times a paper is cited 
+	and by the relevance to keywords or articles input by the user. The goal is to ultimately provide researchers with a way to more efficiently screen papers and possibly provide an insight on 
+	the metadata. The data used in this graph was webscraped from PubMed, using the search term, lung cancer. As a disclaimer, this project is intended only as an academic capstone-project and not for any 
+	commercial use.</p>
+
+	<h2>Search</h2>
+	<p>The search function takes the user input of any words or sentences and computes the revelance of each publication title to the input.
+	This function can be used in conjunction with the 'Selected Article' function. The default term is 'lung cancer', which is set when the input area is blank.</p>
+
+	<h2>Advanced Search</h2>
+	<p>The advanced search function takes the user input of words and filters the publication titles based on the syntax used.</p>
+	<br>
+	<h4>Syntax</h4>
+	<p>
+	<code>inputword</code> -- User input with no syntax will only show publication titles with any instance of the input. For example: the user input, <code>receptor</code>, will show
+	the publication titles, 'the ace2-receptor' or 'epithelial cell receptors'.
+	<br>
+	<br>
+	<code>inputword1, inputword2, inputword3</code> -- User input with a comma between words will only show publication titles with instances of all the input words. For example:
+	the user input, <code>statistics, cancer</code>, will show the publication title, 'statistics of tumour growth from lung cancer, 2019'.
+	<br>
+	<br>
+	<code>!:inputword</code> -- User input beginning with !: will only show publication titles NOT containing the input.
+	<br>
+	<br>
+	<code>E:inputword</code> -- User input beginning with E: will only show publication titles containing the exact input as a standalone word. For example: user input, <code>receptor</code>
+	will show the publication title, 'the ace2 receptor', but will NOT show 'the ace2-receptor' or 'ace2 receptors'.
+	<br>
+	<br>
+	<code>!E:inputword</code> -- User input beginning with !E: will only show publication titles NOT containing the exact input as a standalone word.</p>
+	
+	<h2>Selected Article</h2>
+	<p>The selected article title will be used to the compute the relevance of the selected article to all other articles. This can be used in conjunction to the search 
+	function. Only one article can be selected to be used for computing relevance. No article selected is the default and is not accounted for when calculating relevance. </p>
+
+	<h2>Date Range</h2>
+	<p>The date's range from 2011 to August 2021. The dates represent the date that the articles were published.
+	Note: the number of papers shown heavily rely on the date range filter and will affect the computational time need to create the graph.</p>
+
+	<h2>Filters</h2>
+	<p>Articles containing a property of the checked boxes will be shown. The label filters checkbox creates a legend and labels the articles by markercolor and markershape based on the selected properties.</p>
+
+	<h2>Number of Citations</h2>
+	<p>The number of citations refer to the number of times an article is cited. Articles within the slider range will be shown.</p>
+
+	<h2>How to use the Graph</h3>
+	<p>The graph is made using Plotly. When hovering over the plot, a toolbar will appear on the top right for interactive functions involving zooming, selection, and panning.
+	Data can be selected by individually clicking on the data points or using the box selection or lasso selection tool from the toolbar. When data points are selected, a table below
+	the graph will be populated with the title and abstract of the selected points.</p>
+
+	<h2>Selected Data</h2>
+	<p>After selecting publications from the graph, a table below the graph will be filled with the title and abstract of the selected publications.
+	Below the headers is a filter cell, where the cells can be filtered based on user input. See https://dash.plotly.com/datatable/filtering, under the filtering options to see syntax. </p>
+
+	<h2>Save Selected Data</h2>
+	<p>The 'save selected data' button is located at the bottom of the webpage and will become available only after selection of data. When the button is clicked, the selected data will be downloaded
+	into a csv file. The data contains the information: index, title, abstract, date, publicationtype, free or paid article, journal, number of times cited, doi and URL link.</p>
+</div>
+
+</body>
+</html>
