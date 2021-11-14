@@ -53,7 +53,7 @@ def transform_slidervalue(value): # use in callback to transform input value of 
 
 def calcsimilarity(input_value, clicktitle, df):
     scoredf = df
-    if len(input_value) == 0: # no input in searchbar
+    if input_value == None or len(input_value) == 0: # no input in searchbar
         scoredf['searchscores'] = 0
     else:  # search
         searchterm = input_value
@@ -64,7 +64,7 @@ def calcsimilarity(input_value, clicktitle, df):
         scoredf['searchscores'] = searchscores
 
 
-    if len(clicktitle) == 0: # no article selected
+    if clicktitle == None or len(clicktitle) == 0: # no article selected
     	scoredf['articlescores'] = 0
 
     else:  # click article
