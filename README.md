@@ -2,11 +2,19 @@
 
 ### About
 
-This interactive graph is used as a way to filter and select scientific publications. This project was inspired by the time consuming task of literature review. This is propogated through the current search method of a list view when searching for papers on journal websites, which can be daunting when going through thousands of papers. To present the data in a condensed, organized manner, the graph was set up to sort papers by the number of times a paper is cited and by the relevance to keywords or articles chosen by the user. The goal is to ultimately provide researchers with a way to more efficiently screen papers and possibly provide an insight on the metadata of a particular scientific field. As a disclaimer, this project is intended only as an academic capstone-project and not for any commercial use.
+Lung cancer scientific publications are organized and condensed into a single plot that can be filtered, selected and saved. The filter has the criteria of similarity search with keywords and other articles, date, type of publication and the number of times a paper is cited. All publications were lung cancer-related and web scraped from Pubmed.
+
+### Problem and Goal
+
+Researchers and students performing literature reviews must spend a great deal of time filtering and selecting through lists and lists of thousands of research papers from various journal websites. Another problem apart from time-constraints is efficiently finding papers that are impactful and reproducible. This is important because a scientist must be aware of how an experiment is conducted, where the data is coming from, and whether the data is usable or not. Apart from qualitatively understanding experimental procedures, the number of times a paper is cited is an one important metric used by the scientific community uses to measure the impact of a paper. This metric is poorly utilized to search for publications especially with the constraints of a list view typically used in journal websites.
+
+The goal of this project is to ultimately provide researchers with a tool to more efficiently screen papers and possibly provide an insight on the metadata of a particular scientific field. As a disclaimer, this project is intended only as an academic capstone-project and not for any commercial use.
 
 ### Project Overview
 
-The process of creating this project involved webscraping journal articles from Pubmed using the search term, 'lung cancer', with the python script, `pubmedscrape.py`. Next, the data was cleaned for suitable use for NLP and data visualization using the jupyter notebook, `Data cleaning for Plotly Dash.ipynb`. Here, the final cleaned dataset (`plotlydash.csv`) was created as well as sentence embeddings (`sentence_embeddings.npy`) for each journal article with SBERT to be computed with cosine similarity to determine similarity between articles and keywords. Finally, Plotly Dash was used as a python framework to create an interactive web application for the grpahical search method for lung cancer journal articles and is ran under the Python file: `plotlydash.py`.
+1. Webscraped journal articles from Pubmed using the search term, 'lung cancer', with the python script, `pubmedscrape.py`. 
+2. Cleaned data for suitable use for NLP and data visualization using the jupyter notebook, `Data cleaning for Plotly Dash.ipynb`. Here, the final cleaned dataset (`plotlydash.csv`) was created as well as sentence embeddings (`sentence_embeddings.npy`) for each journal article with SBERT to be computed with cosine similarity to determine similarity between articles and keywords. 
+3. Created a Plotly Dash application for the grpahical search method for lung cancer journal articles and is ran under the Python file: `plotlydash.py`.
 
 ### Locally Run the Application
 
