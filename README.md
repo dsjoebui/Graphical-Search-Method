@@ -14,7 +14,7 @@ The goal of this project is to ultimately provide researchers with a tool to mor
 
 1. Webscraped journal articles from Pubmed using the search term, 'lung cancer', with the python script, `pubmedscrape.py`. 
 2. Cleaned data for suitable use for NLP and data visualization using the jupyter notebook, `Data cleaning for Plotly Dash.ipynb`. Here, the final cleaned dataset (`plotlydash.csv`) was created as well as sentence embeddings (`sentence_embeddings.npy`) for each journal article with SBERT to be computed with cosine similarity to determine similarity between articles and keywords. 
-3. Created a Plotly Dash application for the grpahical search method for lung cancer journal articles and is ran under the Python file: `plotlydash.py`.
+3. Created a Plotly Dash application for the graphical search method for lung cancer journal articles and is ran under the Python file: `plotlydash.py`.
 
 ### Locally Run the Application
 
